@@ -14,7 +14,7 @@ const kPageTitleText = TextStyle(
 
 const kParagraphText = TextStyle(
   color: Colors.black,
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w400,
   fontSize: 20,
 );
 
@@ -22,4 +22,10 @@ const kInputText = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.normal,
   fontSize: 16,
+);
+
+const kButtonText = TextStyle(
+  color: kTextColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
 );

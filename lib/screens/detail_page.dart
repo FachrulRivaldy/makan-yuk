@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_reservation_app/components/constants.dart';
 import 'package:restaurant_reservation_app/data/restaurant_data.dart';
+import 'package:restaurant_reservation_app/components/default_button.dart';
+import 'package:restaurant_reservation_app/screens/homepage.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -10,6 +12,18 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  bool fav = false;
+
+  void _onTap() {
+    setState(() {
+      if (fav == false) {
+        fav = true;
+      } else {
+        fav = false;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -37,8 +51,12 @@ class _DetailPageState extends State<DetailPage> {
                         restaurants[0].name,
                         style: kPageTitleText,
                       ),
-                      const InkWell(
-                        child: Icon(Icons.favorite),
+                      InkWell(
+                        onTap: _onTap,
+                        child: Icon(
+                          Icons.favorite,
+                          color: fav ? Colors.red : Colors.grey,
+                        ),
                       )
                     ],
                   ),
@@ -53,12 +71,31 @@ class _DetailPageState extends State<DetailPage> {
                         style: kParagraphText,
                       )
                     ],
-                  )
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.star),
+                      Text(
+                        restaurants[0].rating.toString(),
+                        style: kParagraphText,
+                      )
+                    ],
+                  ),
+                  Text(
+                    restaurants[0].detail,
+                    textAlign: TextAlign.justify,
+                    style: kParagraphText,
+                  ),
                 ],
               ),
             )
           ],
         ),
+        floatingActionButton: const Button(
+          text: "Pesan Disini",
+          dest: Homepage(),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
