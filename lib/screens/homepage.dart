@@ -11,7 +11,7 @@ class Homepage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(top: 36, left: 30, right: 30),
+          padding: const EdgeInsets.only(top: 48, left: 30, right: 30),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const Text("Halo, Aditya", style: kPageTitleText),
