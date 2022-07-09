@@ -28,68 +28,71 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 250,
-              child: Image.asset(
-                restaurants[0].image,
-                fit: BoxFit.fitWidth,
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 250,
+                child: Image.asset(
+                  restaurants[0].image,
+                  fit: BoxFit.fitWidth,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        restaurants[0].name,
-                        style: kPageTitleText,
-                      ),
-                      InkWell(
-                        onTap: _onTap,
-                        child: Icon(
-                          Icons.favorite,
-                          color: fav ? Colors.red : Colors.grey,
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          restaurants[0].name,
+                          style: kPageTitleText,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.location_pin),
-                      Text(
-                        restaurants[0].place,
-                        style: kParagraphText,
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.star),
-                      Text(
-                        restaurants[0].rating.toString(),
-                        style: kParagraphText,
-                      )
-                    ],
-                  ),
-                  Text(
-                    restaurants[0].detail,
-                    textAlign: TextAlign.justify,
-                    style: kParagraphText,
-                  ),
-                ],
-              ),
-            )
-          ],
+                        InkWell(
+                          onTap: _onTap,
+                          child: Icon(
+                            Icons.favorite,
+                            color: fav ? Colors.red : Colors.grey,
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(Icons.location_pin),
+                        Text(
+                          restaurants[0].place,
+                          style: kParagraphText,
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Icon(Icons.star),
+                        Text(
+                          restaurants[0].rating.toString(),
+                          style: kParagraphText,
+                        )
+                      ],
+                    ),
+                    Text(
+                      restaurants[0].detail,
+                      textAlign: TextAlign.justify,
+                      style: kParagraphText,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
         floatingActionButton: const Button(
           text: "Pesan Disini",

@@ -6,14 +6,9 @@ import 'package:restaurant_reservation_app/components/default_button.dart';
 import 'package:restaurant_reservation_app/screens/success_page.dart';
 import 'package:restaurant_reservation_app/data/user_data.dart';
 
-class CheckoutPage extends StatefulWidget {
+class CheckoutPage extends StatelessWidget {
   const CheckoutPage({Key? key}) : super(key: key);
 
-  @override
-  State<CheckoutPage> createState() => _CheckoutPageState();
-}
-
-class _CheckoutPageState extends State<CheckoutPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

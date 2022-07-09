@@ -105,9 +105,10 @@ class RestoCard extends StatelessWidget {
                 Text(
                   restaurants[index].name,
                   style: const TextStyle(
-                      fontSize: 20,
-                      color: kTextColor,
-                      fontWeight: FontWeight.w500),
+                    fontSize: 20,
+                    color: kTextColor,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
                 Text(
                   restaurants[index].place,
@@ -116,14 +117,16 @@ class RestoCard extends StatelessWidget {
                       color: kTextColor,
                       fontWeight: FontWeight.w500),
                 ),
-                Text(restaurants[index].description,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: kTextColor,
-                      fontWeight: FontWeight.w400,
-                      overflow: TextOverflow.clip,
-                    ),
-                    maxLines: 3),
+                Expanded(
+                  child: Text(restaurants[index].description,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: kTextColor,
+                        fontWeight: FontWeight.w400,
+                        overflow: TextOverflow.clip,
+                      ),
+                      maxLines: 3),
+                ),
               ],
             ),
           )
