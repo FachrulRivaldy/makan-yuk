@@ -39,7 +39,7 @@ List<Restaurant> restaurants = const [
       description: "Restoran bintang 5 dengan tema ala Tiongkok",
       rating: 4.4,
       detail:
-          "Tokyo Cuisine adalah restoran bintang 5 yang memiliki tema Tiongkok serta menyajikan menu Tiongkok dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Tiongkok"),
+          "Chinese Resto adalah restoran bintang 5 yang memiliki tema Tiongkok serta menyajikan menu Tiongkok dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Tiongkok"),
   Restaurant(
       image: "assets/images/AmericanResto.png",
       name: "American Food",
@@ -47,7 +47,7 @@ List<Restaurant> restaurants = const [
       description: "Restoran bintang 5 dengan tema ala Amerika",
       rating: 4.6,
       detail:
-          "Tokyo Cuisine adalah restoran bintang 5 yang memiliki tema Amerika serta menyajikan menu Amerika dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Amerika"),
+          "American Food adalah restoran bintang 5 yang memiliki tema Amerika serta menyajikan menu Amerika dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Amerika"),
   Restaurant(
       image: "assets/images/ArabianResto.png",
       name: "Arabian Resto",
@@ -55,5 +55,5 @@ List<Restaurant> restaurants = const [
       description: "Restoran bintang 5 dengan tema ala Arab",
       rating: 4.9,
       detail:
-          "Tokyo Cuisine adalah restoran bintang 5 yang memiliki tema Amerika serta menyajikan menu Amerika dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Amerika"),
+          "Arabian Resto adalah restoran bintang 5 yang memiliki tema Timur Tengah serta menyajikan menu Timur Tengah dengan nuansa dan dekorasi yang membuat pengunjung dapat merasakan suasana Timur Tengah"),
 ];
