@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_reservation_app/components/constants.dart';
 import 'package:restaurant_reservation_app/data/restaurant_data.dart';
+import 'package:restaurant_reservation_app/screens/detail_page.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -17,7 +18,10 @@ class Homepage extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            const Text("Ingin makan dimana hari ini?"),
+            const Text(
+              "Ingin makan dimana hari ini?",
+              style: kParagraphText,
+            ),
             const SizedBox(
               height: 48,
             ),
@@ -44,6 +48,12 @@ class Homepage extends StatelessWidget {
                     )),
                 itemBuilder: (BuildContext context, int index) {
                   return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPage()));
+                    },
                     child: RestoCard(index: index),
                   );
                 },
