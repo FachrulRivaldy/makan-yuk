@@ -3,7 +3,6 @@ import 'package:restaurant_reservation_app/components/constants.dart';
 import 'package:restaurant_reservation_app/data/restaurant_data.dart';
 import 'package:restaurant_reservation_app/components/default_button.dart';
 import 'package:restaurant_reservation_app/screens/checkout_page.dart';
-import 'package:restaurant_reservation_app/screens/homepage.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class _DetailPageState extends State<DetailPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 250,
               child: Image.asset(

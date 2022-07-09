@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:restaurant_reservation_app/components/constants.dart';
 import 'package:restaurant_reservation_app/components/default_button.dart';
+import 'package:restaurant_reservation_app/screens/success_page.dart';
+import 'package:restaurant_reservation_app/data/user_data.dart';
 
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({Key? key}) : super(key: key);
@@ -29,32 +33,32 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 "Nama Pemesan",
                 style: kParagraphText,
               ),
-              const Text(
-                "Aditya Kurniawan",
+              Text(
+                users[0].name,
                 style: kCheckoutFormText,
               ),
               const Text(
                 "Tanggal Reservasi",
                 style: kParagraphText,
               ),
-              const Text(
-                "9 Juli 2022",
+              Text(
+                users[0].date,
                 style: kCheckoutFormText,
               ),
               const Text(
                 "Jam Reservasi",
                 style: kParagraphText,
               ),
-              const Text(
-                "20.00 WIB",
+              Text(
+                users[0].time,
                 style: kCheckoutFormText,
               ),
               const Text(
                 "Jumlah Orang",
                 style: kParagraphText,
               ),
-              const Text(
-                "4 Orang",
+              Text(
+                users[0].amount,
                 style: kCheckoutFormText,
               ),
               const Text(
@@ -99,7 +103,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   Text("Rp. 70.000,-", style: kCheckoutFormText),
                 ],
               ),
-              // Button()
+              Center(
+                  child: Button(
+                dest: SuccessPage(),
+                text: "Checkout",
+              ))
             ],
           ),
         ),

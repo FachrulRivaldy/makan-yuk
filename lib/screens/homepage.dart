@@ -7,7 +7,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(restaurants.length);
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -58,7 +57,7 @@ class Homepage extends StatelessWidget {
 }
 
 class RestoCard extends StatelessWidget {
-  const RestoCard({required this.index});
+  const RestoCard({Key? key, required this.index}) : super(key: key);
 
   final int index;
 
@@ -74,7 +73,7 @@ class RestoCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(children: [
-          Container(
+          SizedBox(
             height: 100,
             width: 100,
             child: ClipRRect(
